@@ -34,9 +34,8 @@ with open(WORDS) as words:
         if len(word) >= 2:
             dictionary.add(word)
 
-with open("/Users/wilsonp/domains.txt") as domains:
-    for domain in domains:
-        domain_list.append(domain.rstrip())
+for line in sys.stdin:
+    domain_list.append(line.rstrip())
 
 for domain in domain_list:        
     pieces = domain.split('-')
